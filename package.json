@@ -1,0 +1,32 @@
+{
+  "name": "book-library",
+  "version": "1.0.0",
+  "description": "book library",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "live-server",
+    "build": "rollup -c --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexandroff1997/bookLibrary.git"
+  },
+  "keywords": [
+    "book"
+  ],
+  "author": "Aleksander Aleksandrov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexandroff1997/bookLibrary/issues"
+  },
+  "homepage": "https://github.com/Alexandroff1997/bookLibrary#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "eslint": "^8.56.0",
+    "live-server": "^1.2.2",
+    "rollup": "^4.9.6",
+    "rollup-plugin-import-css": "^3.4.0"
+  }
+}
