@@ -22,7 +22,7 @@
 	text-decoration: none;
 }
 
-.imgStyles {
+.menu__item img {
 	height: 40px;
 	width: 40px;
 }

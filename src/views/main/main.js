@@ -1,6 +1,7 @@
 import { AbstractView } from '../../common/view.js';
 import onChange from 'on-change';
 import { Header } from '../../components/header/header.js';
+import { Search } from '../../components/search/search.js';
 
 export class MainView extends AbstractView {
 	state = {
@@ -26,7 +27,7 @@ export class MainView extends AbstractView {
 
 	render() {
 		const elem = document.createElement('div');
-		elem.innerHTML = `Number of books: ${this.globalState.favorites.length}`;
+		elem.append(new Search(this.state).render());
 		this.app.innerHTML = '';
 		this.app.append(elem);
 		this.renderHeader();
