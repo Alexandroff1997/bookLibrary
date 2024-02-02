@@ -5,7 +5,7 @@ export default {
 	input: "src/app.js",
 	output: {
 		dir: "dist",
-		format: "esm"
+		format: "esm",
 	},
-	plugins: [ css(), nodeResolve() ]
+	plugins: [ css({ output: 'assets/bundle.css' }), nodeResolve() ]
 }

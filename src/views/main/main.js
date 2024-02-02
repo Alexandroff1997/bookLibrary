@@ -1,5 +1,6 @@
 import { AbstractView } from '../../common/view.js';
 import onChange from 'on-change';
+import { Header } from '../../components/header/header.js';
 
 export class MainView extends AbstractView {
 	state = {
@@ -28,6 +29,12 @@ export class MainView extends AbstractView {
 		elem.innerHTML = `Number of books: ${this.globalState.favorites.length}`;
 		this.app.innerHTML = '';
 		this.app.append(elem);
+		this.renderHeader();
 		this.globalState.favorites.push('ldd');
+	}
+
+	renderHeader() {
+		const header = new Header(this.globalState).render();
+		this.app.prepend(header);
 	}
 }
