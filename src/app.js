@@ -1,3 +1,4 @@
+import { FavoritesView } from './views/favorites/favorites.js';
 import { MainView } from './views/main/main.js';
 
 class App {
@@ -6,7 +7,8 @@ class App {
 	};
 
 	routes = [
-		{ path: "", view: MainView }
+		{ path: "", view: MainView },
+		{ path: "#favorites", view: FavoritesView },
 	];
 
 	constructor() {
