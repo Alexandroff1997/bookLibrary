@@ -9,7 +9,8 @@ export class MainView extends AbstractView {
 		list: [],
 		loading: false,
 		searchQuery: null,
-		offset: 0
+		offset: 0,
+		numFound: 0
 	};
 
 	constructor(globalState) {
@@ -30,8 +31,9 @@ export class MainView extends AbstractView {
 		if (path === 'searchQuery') {
 			this.state.loading = true;
 			const data = await this.loadList(this.state.searchQuery, this.state.offset);
-			console.log(data);
 			this.state.loading = false;
+			console.log(data);
+			this.state.numFound = data.numFound;
 			this.state.list = data.docs; 
 		}
 		if (path === 'loading') {
